@@ -26,7 +26,7 @@ angular.module('Medibot', [])
     	console.log("Option Choice :: ", code);
     	console.log("Option Label :: ", label);
 
-    	showMessage("bot", label);
+    	showMessage("myself", label);
     	vm.choiceOptions = [];
 
     	MedibotService.postOptionsChoice(code, currentContext).then(sucessHandler);  
@@ -50,7 +50,7 @@ angular.module('Medibot', [])
 		var message = e.data.message;
 
 		currentContext = e.data.context;
-  		vm.choiceOptions = e.data.symptons;
+  		vm.choiceOptions = !e.data.symptons ? [] : e.data.symptons;
 
 		showMessage("bot", message);
     }
@@ -62,7 +62,7 @@ angular.module('Medibot', [])
 
     	var messagesContainer = $("#messages-container");
     	var messagesContainerHeight = messagesContainer.height();
-    	messagesContainer.scrollTop(messagesContainerHeight-100);
+    	messagesContainer.scrollTop(messagesContainerHeight-200);
     }
 
     // start
