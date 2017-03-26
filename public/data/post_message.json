@@ -1,0 +1,13 @@
+{
+	"success":true,
+	"context":"234b23jh42jh3v42342bj342nkj34234",
+	"response":{
+		"message":"Precisamos que você nos diga o que você está sentindo. Isso vai auxiliar a encontrarmos o melhor profissional para te ajudar.",
+		"options":[
+			{"code":1, "label":"Dor no estômago"},
+			{"code":2, "label":"Náuseas"},
+			{"code":3, "label":"Inchaço nos braços e pernas"},
+			{"code":4, "label":"Formigamento no corpo"}
+		]	
+	}
+}

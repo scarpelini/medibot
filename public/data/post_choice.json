@@ -1,0 +1,12 @@
+{
+	"success":true,
+	"response":{
+		"message":"Precisamos de mais algumas informações. Você sente um ou mais dos sintomas abaixo?",
+		"options":[
+			{"code":1, "label":"Dor no estômago"},
+			{"code":2, "label":"Náuseas"},
+			{"code":3, "label":"Inchaço nos braços e pernas"},
+			{"code":4, "label":"Formigamento no corpo"}
+		]	
+	}
+}
