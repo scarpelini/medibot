@@ -1,13 +1,27 @@
 {
-	"success":true,
-	"context":"234b23jh42jh3v42342bj342nkj34234",
-	"response":{
-		"message":"Precisamos que você nos diga o que você está sentindo. Isso vai auxiliar a encontrarmos o melhor profissional para te ajudar.",
-		"options":[
-			{"code":1, "label":"Dor no estômago"},
-			{"code":2, "label":"Náuseas"},
-			{"code":3, "label":"Inchaço nos braços e pernas"},
-			{"code":4, "label":"Formigamento no corpo"}
-		]	
-	}
+  "message": "Bom dia campião. Vamos agendar sua consulta?",
+  "symptons": [
+  	{"id":"1", "description":"Perda de sensibilidade"}, 
+  	{"id":"2", "description":"Inchaço"},
+  	{"id":"3", "description":"Formigamento nas mãos"} 
+  ],
+  "context": {
+    "conversation_id": "f0a8bb26-decb-4c46-8632-99dbd7baed51",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "root"
+        }
+      ],
+      "dialog_turn_counter": 1,
+      "dialog_request_counter": 1,
+      "_node_output_map": {
+        "apresentacao": [
+          0
+        ]
+      },
+      "branch_exited": true,
+      "branch_exited_reason": "completed"
+    }
+  }
 }

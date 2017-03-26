@@ -12,6 +12,19 @@ main
 
   background-color: #efefef;
   height: 100vh;
+  padding-bottom: 165px;
+}
+
+#messages-container ul li
+{
+  list-style-type: none;
+}
+
+#choice-options
+{
+  position: absolute;
+  bottom: 0px;
+  /*padding: 0;*/
 }
 
 #form-submit
@@ -35,7 +48,7 @@ main
   background-color: #22e070;
 }
 
-#form-submit button:focus, #form-submit input:focus
+#form-submit button:focus, #form-submit input:focus, #choice-options button:focus
 {
   outline:0;
 }
@@ -65,11 +78,10 @@ main
   height: auto;
   padding: 10px;
   margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
   border-radius: 6px;
   word-wrap: break-word;
-  list-style-type: none;
   /*padding: .6em .6em .3em !important;*/
 }
 

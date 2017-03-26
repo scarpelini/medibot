@@ -11,13 +11,18 @@
 	<link rel="stylesheet" href="stylesheets/main.css">
 	<!-- Javascript -->
 	<script src="js/vendors/angular.min.js"></script>
+	<script src="js/vendors/jquery-3.2.0.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body>
 	<main ng-controller="MedibotController as Medibot" class="container-fluid">
 		<div id="messages-container" class="row">
 			<ul class="list-group">
-				<li ng-repeat="item in Medibot.messages" class="message {{item.messageClass}}">{{item.message}}</li>
+				<li class="col-xs-12" ng-repeat="item in Medibot.messages">
+					<div class="message {{item.messageClass}}">
+						{{item.message}}
+					</div>
+				</li>
 				<!-- <li class="message myself-message">Estou com dores no meu coração. Acho que é paixão <3</li>
 				<li class="message bot-message">Jura? Tenho um ótimo remédio pra você.</li>
 				<li class="message bot-message">VODKA.</li> -->
@@ -26,7 +31,7 @@
 
 		<div class="row">
 		
-			<form id="form-submit" class="form-inline col-xs-12">
+			<form id="form-submit" ng-show="Medibot.choiceOptions.length == 0" class="form-inline col-xs-12">
 			  <!-- <div class="form-group"> -->
 			    <!-- <label for="exampleInputEmail2">Email</label> -->
 			    <input ng-model="Medibot.textFieldValue" type="text" class="col-xs-8" id="exampleInputEmail2" placeholder="Digite sua mensagem">
@@ -34,6 +39,11 @@
 			  <!-- </div> -->
 			  
 			</form>
+			<div id="choice-options" ng-show="Medibot.choiceOptions.length > 0" class="col-xs-12">
+				<div class="list-group">
+					<button ng-repeat="option in Medibot.choiceOptions" ng-click="Medibot.chooseOption(option.id, option.description)" type="button" class="list-group-item">{{option.description}}</button>
+				</div>
+			</div>
 		</div>
 	</main>
 </body>
